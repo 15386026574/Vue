@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        {{obj.a}}
+        {{obj.b}}
+        {{obj.c}}
+
+        <button @click="add">add</button>
+        <button @click="del">del</button>
+    </div>
+
+    <script src="./vue@2.6.12.js"></script>
+    <script>
+        let app = new Vue({
+            el: '#app',
+            data: {
+                obj: {
+                    a: 1,
+                    b: 2
+                }
+            },
+            methods: {
+                add() {
+                    // this.obj.c = 3
+                    // this.$set(this.obj, 'c', 3)
+                    this.obj = Object.assign({}, this.obj, { c: 3 })
+                },
+                del() {
+                    // delete this.obj.a
+                    this.$delete(this.obj,"a");
+                    console.log(this.obj)
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

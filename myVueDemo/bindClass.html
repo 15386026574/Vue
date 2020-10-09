@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .font_size {
+            color: blue;
+            font-size: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <span v-bind:class="{font_size:font_size_data}">123456</span>
+    </div>
+    <script src="./vue@2.6.12.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                font_size_data: false
+            },
+            methods: {
+
+            },
+        })
+    </script>
+</body>
+
+</html>
