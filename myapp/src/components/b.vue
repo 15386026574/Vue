@@ -10,20 +10,20 @@
 
 <script>
 export default {
-  data () {
+  data() {
     return {}
   },
   methods: {
     // 注意取值用this.$route,
     // 注意传递值用this.$router
-    toA () {
+    toA() {
       console.log(this.$router)
       this.$router.push({ path: '/a' })
     },
-    getA () {
+    getA() {
       console.log(this.$route.query)
     },
-    getAparams () {
+    getAparams() {
       console.log(this.$route)
       console.log(this.$route.params)
     }
