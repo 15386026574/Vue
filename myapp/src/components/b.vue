@@ -14,6 +14,8 @@ export default {
     return {}
   },
   methods: {
+    // 注意取值用this.$route,
+    // 注意传递值用this.$router
     toA () {
       console.log(this.$router)
       this.$router.push({ path: '/a' })

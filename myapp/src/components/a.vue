@@ -12,9 +12,11 @@ export default {
   },
   methods: {
     toB () {
+      // 类似于Get请求
       this.$router.push({ path: '/b', query: { name: 'YYB', age: 12 } })
     },
     toBpa () {
+      // 类似于post请求
       this.$router.push({ name: 'b', params: { name: 'YYBLOVE', age: 122 } })
     }
   }
