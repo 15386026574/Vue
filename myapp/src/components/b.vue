@@ -3,7 +3,8 @@
     <a>这是b界面</a>
     <!--  -->
     <button @click="toA">去往A界面</button>
-    <button @click="getA">getData</button>
+    <button @click="getA">getDataQuery</button>
+    <button @click="getAparams">getDatapa</button>
   </div>
 </template>
 
@@ -19,6 +20,10 @@ export default {
     },
     getA () {
       console.log(this.$route.query)
+    },
+    getAparams () {
+      console.log(this.$route)
+      console.log(this.$route.params)
     }
   }
 }
