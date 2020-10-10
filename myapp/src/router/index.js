@@ -5,6 +5,10 @@ import A from '@/components/a'
 import B from '@/components/b'
 import NotFound from '@/components/404'
 import Home from '@/components/Home.vue'
+import main from '@/components/demo/main.vue'
+import header from '@/components/demo/myheader.vue'
+import container from '@/components/demo/mycontainter.vue'
+import footer from '@/components/demo/myfooter.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -28,16 +32,40 @@ export default new Router({
       path: '/Home',
       name: 'Home',
       component: Home,
-      children: [{
-        path: '/a',
-        name: 'a',
-        component: A
-      },
-      {
-        path: '/b',
-        name: 'b',
-        component: B
-      }]
+      children: [
+        {
+          path: '/a',
+          name: 'a',
+          component: A
+        },
+        {
+          path: '/b',
+          name: 'b',
+          component: B
+        }
+      ]
+    },
+    {
+      path: '/book',
+      name: 'book',
+      component: main,
+      children: [
+        {
+          path: '/header',
+          name: 'header',
+          component: header
+        },
+        {
+          path: '/container',
+          name: 'container',
+          component: container
+        },
+        {
+          path: '/footer',
+          name: 'footer',
+          component: footer
+        }
+      ]
     }
   ]
 })
