@@ -14,8 +14,9 @@ Vue.use(Router)
 
 const originalPush = Router.prototype.push
 
-Router.prototype.push = function push (location, onResolve, onReject) {
-  if (onResolve || onReject) return originalPush.call(this, location, onResolve, onReject)
+Router.prototype.push = function push(location, onResolve, onReject) {
+  if (onResolve || onReject)
+    return originalPush.call(this, location, onResolve, onReject)
   return originalPush.call(this, location).catch(err => err)
 }
 
@@ -56,6 +57,11 @@ export default new Router({
       ]
     },
     {
+      path: '/detail',
+      name: 'detail',
+      component: Detail
+    },
+    {
       path: '/container',
       name: 'container',
       component: Container,
@@ -64,12 +70,7 @@ export default new Router({
           path: '/containerList',
           name: 'containerList',
           component: ContainerList
-        },
-        {
-          path: '/detail',
-          name: 'detail',
-          component: Detail
-        },
+        }
       ]
     }
   ]

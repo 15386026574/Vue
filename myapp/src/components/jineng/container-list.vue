@@ -64,7 +64,11 @@
         </ul>
     </div>
 </template>
-
+<script>
+export default {
+    
+}
+</script>
 <style scoped>
 
 .container-list .search-box {
